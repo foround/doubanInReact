@@ -1,0 +1,31 @@
+.moiveImage{
+    height: 150px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+.movieDesc{
+    padding-left: 10px;
+}
+.movieDesc p{
+    font-size: 13px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 6em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.spirit{
+    width:55px;
+    height: 10px;
+    display: inline-block;
+    background-image: url('/images/rating.png');
+    background-size: 55px 121px;
+}
+.rating{
+    font-size: 10px;
+    color: grey;
+    margin-left: 5px;
+}

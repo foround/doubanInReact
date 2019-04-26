@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container:after{
+    content: '';
+    width: 30%;
+    border:1px solid transparent;
+}
+.itemWrapper{
+    width: 30%;
+}

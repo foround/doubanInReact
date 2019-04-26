@@ -15,7 +15,11 @@ export default function({records}) {
                         {
                             records.subjects.slice(0,10)
                             .map(subject => {
-                                return <MovieItem subject={subject} key={subject.id}/>
+                                return (
+                                    <div className={style.itemWrapper}>
+                                        <MovieItem subject={subject} key={subject.id}/>
+                                    </div>
+                                )
                             })
                         }
                     </div>

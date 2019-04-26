@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../assets/style/Main.module.css'
+import style from '../assets/style/Item.module.css'
 import Rating from './Rating';
 export default function({subject}){
     let {title,id,images,rating} = subject;
