@@ -11,8 +11,8 @@ export default function({records}) {
                         records.subjects
                         .map(subject => {
                             return (
-                                <div className={style.itemWrapper}>
-                                    <MovieItem subject={subject} key={subject.id}/>
+                                <div className={style.itemWrapper} key={subject.id}>
+                                    <MovieItem subject={subject} />
                                 </div>
                             )
                         })

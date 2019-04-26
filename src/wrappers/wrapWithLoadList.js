@@ -12,10 +12,9 @@ export default function(WrapperedComponent){
             translateMiddleware: PropTypes.func
         }
         render(){
-            console.log(this.props.translateMiddleware)
             const {state,category} = this.props;
             const {records} = state[category];
-            return <WrapperedComponent records={records}/>
+            return <WrapperedComponent records={records} category={category}/>
         }
         componentWillMount() {
             const {fetchList,url,category,translateMiddleware} = this.props

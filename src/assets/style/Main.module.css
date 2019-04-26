@@ -20,10 +20,11 @@
 .sectionHeader h4{
     margin: 10px 0;
 }
-.sectionHeader span{
+.sectionHeader a{
     font-size: 14px;
     color: #08ba11;
     margin-right: 10px;
+    text-decoration: none;
 }
 .itemWrapper{
     margin-right: 20px;

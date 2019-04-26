@@ -6,6 +6,8 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux'
 import reducer from './reducer/rootReducer';
 import Index from './pages/Index';
+import ListOfCategory from './pages/ListOfCategory';
+import { Switch,BrowserRouter,Route,Redirect } from 'react-router-dom';
 const store = createStore(
     reducer,
     applyMiddleware(thunk)
@@ -14,9 +16,16 @@ setTimeout(function(){
     console.log(store.getState())
 },10000)
 ReactDOM.render(
-    <Provider store={store}>
-        <Index/>
-    </Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <Switch>
+                <Route path='/' exact component={Index}/>
+                <Route path='/list/:category' component={ListOfCategory}/>
+                <Redirect to="/" />
+            </Switch>
+        </Provider>
+    </BrowserRouter>
+
     ,
     document.getElementById('root')
 );

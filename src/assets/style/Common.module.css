@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 .container:after{
     content: '';
@@ -10,4 +11,5 @@
 }
 .itemWrapper{
     width: 30%;
+    margin-bottom: 20px;
 }
