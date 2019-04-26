@@ -1,29 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { fetchList } from '../reducer/rootReducer';
+import React from 'react';
 import MovieItem from "./MovieItem";
-class RowList extends Component {
-    static propTypes = {
-        fetchList: PropTypes.func,
-        state: PropTypes.object,
-        url: PropTypes.string,
-        category: PropTypes.string,
-        translateMiddleware: PropTypes.func
-    }
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() {
-        const {state,category} = this.props;
-        const {records} = state[category];
-        let mainContent
-        if(Object.keys(records).length > 0){
-            mainContent = (
-                <section>
-                    <h3>{records.title}</h3>
-                    <div>
+import style from '../assets/style/Main.module.css'
+export default function({records}) {
+    let mainContent = (<section></section>)
+    if(Object.keys(records).length > 0){
+        mainContent = (
+            <section>
+                <header className={style.sectionHeader}>
+                    <h4>{records.title}</h4>
+                    <span>查看更多 ></span>
+                </header>
+                <section className={style.rowContainer}>
+                    <div className={style.commonRow}>
                         {
                             records.subjects.slice(0,10)
                             .map(subject => {
@@ -32,27 +20,12 @@ class RowList extends Component {
                         }
                     </div>
                 </section>
-            )
-        }else{
-            mainContent = (
-                <section>
-                </section>
-            )
-        }
-        return (
-            <section>
-            {mainContent}
             </section>
-         );
+        )
     }
-    componentWillMount() {
-        const {fetchList,url,category,translateMiddleware} = this.props
-        fetchList(url,category,translateMiddleware)
-    }
+    return (
+        <section>
+            {mainContent}
+        </section>
+        );
 }
-const mapDispatchToProps = (dispatch) => ({
-    fetchList: (url,category,translateMiddleware) => dispatch(fetchList(url,category,translateMiddleware))
-})
-const mapStateToProps = (state) => ({state})
-RowList = connect(mapStateToProps,mapDispatchToProps)(RowList)
-export default RowList;
