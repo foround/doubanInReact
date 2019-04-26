@@ -1,9 +1,9 @@
-import React from './node_modules/react';
-import ReactDOM from './node_modules/react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './index.css';
-import {createStore,applyMiddleware} from './node_modules/redux';
-import thunk from './node_modules/redux-thunk';
-import {Provider} from './node_modules/react-redux'
+import {createStore,applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import {Provider} from 'react-redux'
 import reducer from './reducer/rootReducer';
 import Index from './pages/Index';
 const store = createStore(

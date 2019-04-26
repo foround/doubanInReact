@@ -1,4 +1,4 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import RowList from '../components/RowList';
 import {inTheatersMiddleware,top250Middleware,usBoxMiddleware} from '../utils/middlewares'
 class Index extends Component {

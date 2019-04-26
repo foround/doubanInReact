@@ -1,5 +1,5 @@
 import ajax from '../utils/ajax';
-import { combineReducers } from './node_modules/redux';
+import { combineReducers } from 'redux';
 import {
     inTheatersReducer as in_theaters,
     top250Reducer as top250,
