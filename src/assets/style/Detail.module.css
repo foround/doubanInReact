@@ -1,0 +1,60 @@
+.container{
+    background: #faf6f7;
+    padding-bottom: 50px;
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.section1{
+    composes: section;
+    align-items: center;
+}
+.section1 .imageWrapper{
+    width: 40%;
+}
+.imageWrapper img{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 3px;
+}
+.section1 .baseInfo{
+    width: 60%;
+    padding-right: 10px;
+}
+.header h4{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.header h5{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-style: italic;
+}
+.infoWrapper p{
+    font-size: 12px;
+    color: grey;
+    margin: 0;
+}
+.gradeContainer{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.gradeContainer h6 sup{
+    text-indent: 0.5em;
+    font-size: 0.8em;
+}
+.gradeContainer h6{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 4em;
+}
