@@ -1,22 +1,22 @@
 .container{
     background: #faf6f7;
+    padding: 0 10px;
     padding-bottom: 50px;
 }
 .section{
-    display: flex;
-    justify-content: space-around;
     padding-top: 20px;
 }
 .section1{
     composes: section;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 .section1 .imageWrapper{
     width: 40%;
 }
 .imageWrapper img{
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
     margin-right: 10%;
     border-radius: 3px;
 }
@@ -57,4 +57,29 @@
     margin-top: 5px;
     margin-bottom: 5px;
     max-width: 4em;
+}
+.section2{
+    composes: section;
+}
+.section2 p{
+    font-size: 12px;
+    min-height: 25px;
+}
+.section2 p em{
+    font-size: 1.4em;
+    line-height: 2em;
+    padding-right: 1em;
+    float: left;
+}
+.toggleButton{
+    color: #08ba11;
+    text-decoration: underline;
+    margin-left: 0.5em;
+}
+.section3{
+    composes: section;
+}
+.section3 p{
+    font-size: 14px;
+    text-indent: 2em;
 }

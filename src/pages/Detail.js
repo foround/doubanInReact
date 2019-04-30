@@ -6,29 +6,27 @@ class Detail extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            data:{}
+            data:{},
+            isShowAll: false
          }
     }
     render() {
-        let {data} = this.state
+        let {data,isShowAll} = this.state
         console.log(data)
-        let yearInfo;
-        let typeInfo;
-        let durationInfo;
-        let stars
         if(Object.keys(data).length > 0){
             let {attrs,rating} = data;
-            yearInfo = attrs.year.join('/');
-            stars = Math.floor((rating.average)) * 5
-            typeInfo = [...attrs.movie_type].join('/')
-            durationInfo = [...attrs.movie_duration].map(item => `片长${item}`)
+            let yearInfo = attrs.year.join('/');
+            let stars = Math.floor((rating.average)) * 5
+            let typeInfo = [...attrs.movie_type].join('/')
+            let durationInfo = [...attrs.language,...attrs.country,...attrs.movie_duration.map(item => `片长${item}`)].join('/');
+            let toggleButton = (<span className={style.toggleButton} onClick={() => this.setState({isShowAll: !isShowAll})}>{isShowAll? '收起':'展开'}</span>)
             return (
                 <section className={style.container}>
                     <section className={style.section1}>
                         <div className={style.imageWrapper}>
                             <img src={data.image} alt=""/>
                         </div>
-                        <div>
+                        <div className={style.baseInfo}>
                             <header className={style.header}>
                                 <h4>{data.title}({yearInfo})</h4>
                                 <h5>{data.alt_title}</h5>
@@ -42,6 +40,23 @@ class Detail extends Component {
                                 <Rating stars={stars} rating={data.rating.average}></Rating>
                             </div>
                         </div>
+                    </section>
+                    <section className={style.section2}>
+                        <h4>影人</h4>
+                        <p>
+                            <em>导演</em>{attrs.director.join('/')}
+                        </p>
+                        <p>
+                            <em>编剧</em>{attrs.writer.join('/')}
+                        </p>
+                        <p>
+                            <em>主演</em>{this.state.isShowAll? attrs.cast.join('/'):attrs.cast.slice(0,10).join('/')}{toggleButton}
+
+                        </p>
+                    </section>
+                    <section className={style.section3}>
+                        <h4>简介</h4>
+                        <p>{data.summary}</p>
                     </section>
                 </section>
              );
