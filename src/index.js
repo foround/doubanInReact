@@ -8,6 +8,7 @@ import reducer from './reducer/rootReducer';
 import Index from './pages/Index';
 import ListOfCategory from './pages/ListOfCategory';
 import Detail from './pages/Detail';
+import Search from './pages/Search';
 import { Switch,BrowserRouter,Route,Redirect } from 'react-router-dom';
 const store = createStore(
     reducer,
@@ -23,6 +24,7 @@ ReactDOM.render(
                 <Route path='/' exact component={Index}/>
                 <Route path='/list/:category' component={ListOfCategory}/>
                 <Route path='/detail/:id' component={Detail}/>
+                <Route path='/search' component={Search}/>
                 <Redirect to="/" />
             </Switch>
         </Provider>

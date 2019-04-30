@@ -1,5 +1,31 @@
+@value colors: './colors.css';
+@value doubanGreen from colors;
 .container{
     margin-left: 10px;
+}
+.searchBar{
+    background-color: doubanGreen;
+    overflow:hidden;
+    margin-left: -10px;
+    text-align: center;
+}
+.searchBar .inputSimulation{
+    width: 90%;
+    margin: 10px auto;
+    height: 25px;
+    background-color: white;
+    color: #888888;
+    line-height: 25px;
+    font-size: 10px;
+    border-radius: 3px;
+    position: relative;
+}
+.searchBar .inputSimulation span{
+    margin-left: 4px;
+}
+.searchBar .inputSimulation input{
+    width: 90%;
+    text-indent: 1em;
 }
 .rowContainer{
     width: 100%;
@@ -22,7 +48,7 @@
 }
 .sectionHeader a{
     font-size: 14px;
-    color: #08ba11;
+    color: doubanGreen;
     margin-right: 10px;
     text-decoration: none;
 }

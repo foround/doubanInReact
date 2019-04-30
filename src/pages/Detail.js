@@ -12,7 +12,6 @@ class Detail extends Component {
     }
     render() {
         let {data,isShowAll} = this.state
-        console.log(data)
         if(Object.keys(data).length > 0){
             let {attrs,rating} = data;
             let yearInfo = attrs.year.join('/');
@@ -63,9 +62,7 @@ class Detail extends Component {
         }else{
             return <section></section>
         }
-        
     }
-    
     componentWillMount() {
         let {id} = this.props.match.params
         this.getMovieInfo(id)
@@ -77,5 +74,4 @@ class Detail extends Component {
         this.setState({data:response.data.data})
     }
 }
- 
 export default Detail;
