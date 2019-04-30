@@ -26,7 +26,15 @@
 .searchBar .inputSimulation input{
     width: 90%;
     text-indent: 1em;
+    border: 0;
+    outline: none;
+    
 }
+.searchBar .inputSimulation input:focus {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+} 
 .rowContainer{
     width: 100%;
     overflow: scroll;
