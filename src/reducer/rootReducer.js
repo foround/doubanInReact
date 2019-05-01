@@ -1,4 +1,4 @@
-import ajax from '../utils/ajax';
+import ajax from 'utils/ajax';
 import { combineReducers } from 'redux';
 import {
     inTheatersReducer as in_theaters,

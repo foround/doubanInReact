@@ -1,6 +1,6 @@
 import React from 'react';
-import CommonList from '../containers/CommonList';
-import {top250Middleware,inTheatersMiddleware,usBoxMiddleware} from '../utils/middlewares';
+import CommonList from 'containers/CommonList';
+import {top250Middleware,inTheatersMiddleware,usBoxMiddleware} from 'utils/middlewares';
 import { Redirect } from 'react-router-dom';
 const propsList = {
     'top250':{

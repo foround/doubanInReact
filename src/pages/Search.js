@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from '../components/SearchBar';
-import SearchList from "../components/SearchList";
-import ajax from '../utils/ajax';
+import SearchBar from 'components/SearchBar';
+import SearchList from "components/SearchList";
+import ajax from 'utils/ajax';
 class Search extends Component {
     constructor(props) {
         super(props);

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../assets/style/Main.module.css";
+import styles from "style/Main.module.css";
 import 'font-awesome/css/font-awesome.css'
 export default function(props){
     return (

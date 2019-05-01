@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
-import RowList from '../containers/RowList';
-import SearchBar from '../components/SearchBar';
-import {inTheatersMiddleware,top250Middleware,usBoxMiddleware} from '../utils/middlewares'
-import style from '../assets/style/Main.module.css'
+import RowList from 'containers/RowList';
+import SearchBar from 'components/SearchBar';
+import {inTheatersMiddleware,top250Middleware,usBoxMiddleware} from 'utils/middlewares'
+import style from 'style/Main.module.css'
 class Index extends Component {
     render() {
         const {history} = this.props;

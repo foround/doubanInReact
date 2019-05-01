@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieItem from "./MovieItem";
-import style from '../assets/style/Common.module.css'
+import style from 'style/Common.module.css'
 export default function({records}) {
     let mainContent = (<section></section>)
     if(Object.keys(records).length > 0){

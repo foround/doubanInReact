@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieItem from "./MovieItem";
 import { Link } from 'react-router-dom';
-import style from '../assets/style/Main.module.css'
+import style from 'style/Main.module.css'
 export default function({records,category}) {
     let mainContent = (<section></section>)
     if(Object.keys(records).length > 0){

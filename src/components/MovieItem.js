@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import style from '../assets/style/Item.module.css'
+import style from 'style/Item.module.css'
 import Rating from './Rating';
 const MovieItem = function({subject,history}){
     let {title,id,images,rating} = subject;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ajax from "../utils/ajax";
-import style from '../assets/style/Detail.module.css';
-import Rating from '../components/Rating';
+import ajax from "utils/ajax";
+import style from 'style/Detail.module.css';
+import Rating from 'components/Rating';
 class Detail extends Component {
     constructor(props) {
         super(props);

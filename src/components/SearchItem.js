@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import styles from '../assets/style//search.module.css';
+import styles from 'style/search.module.css';
 import Rating from './Rating';
 
 const SearchItem = function(props){
