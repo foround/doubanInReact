@@ -69,9 +69,10 @@ class Detail extends Component {
     }
 
     async getMovieInfo(id){
-        let url = `/movie/${id}`;
+        let url = `/movie/${id}?apikey=0df993c66c0c636e29ecbb5344252a4a`;
         let response = await ajax(url);
-        this.setState({data:response.data.data})
+        if('attrs' in response.data.data)
+            this.setState({data:response.data.data})
     }
 }
 export default Detail;

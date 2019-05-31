@@ -35,7 +35,9 @@ export const fetchList = (url,category,translateMiddleWare) => (dispatch,getStat
     if(!dataFromCache ||
         currentTimeStamp - JSON.parse(dataFromCache).timestamp > EXPIRE)
     {
-        ajax.get(url)
+        let param = '?apikey=0df993c66c0c636e29ecbb5344252a4a'
+        console.log(url + param)
+        ajax.get(url+param)
         .then((res) => {
             localStorage.setItem(category,JSON.stringify(res))
             dispatch(receiveList(res,category))

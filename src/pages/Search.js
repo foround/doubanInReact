@@ -36,6 +36,7 @@ class Search extends Component {
                     <i className="fa fa-search" style={iconStyle} aria-hidden="true"></i>
                     <input type='text' placeholder='搜索' onChange={this.bindInput.bind(this)} onKeyDown={this.handleKeyDown.bind(this)}/>
                 </SearchBar>
+                <h4>{title}</h4>
                 {subjects.length > 0? resultList: null}
             </section>
         );
@@ -50,11 +51,14 @@ class Search extends Component {
         return;
     }
     async fetchResults(){
-        let url = `/movie/search?q=${this.state.value}`
+        let url = `/movie/search?q=${this.state.value}&apikey=0df993c66c0c636e29ecbb5344252a4a`
         console.log(url)
         let response = await ajax.get(url);
         let {subjects,title} = response.data.data
-        console.log(subjects)
+        if(subjects === undefined && title === undefined){
+            subjects = [];
+            title = 'Opps,暂时无法获取对应资源'
+        }
         this.setState({subjects,title})
         console.log({subjects,title})
     }

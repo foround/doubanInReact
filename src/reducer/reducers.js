@@ -13,6 +13,7 @@ const reducerGenerator = (category) => function(state,action){
         case RECEIVE_LIST:
             let response = action.payload;
             if(response.data.errorCode === 0){
+                console.log(action)
                 state = action.translateMiddleWare(response)
             }
             break;
